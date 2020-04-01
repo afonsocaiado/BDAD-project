@@ -67,7 +67,7 @@ DROP TABLE IF EXISTS Produto;
 CREATE TABLE Produto (
   nomeP                 STRING NOT NULL,
   codigo                INTEGER PRIMARY KEY,
-  custoUnitario         DOUBLE CHECK(custoUnitario >= 0),
+  custoUnitario         DOUBLE CHECK(custoUnitario > 0),
   quantidadeStock       INTEGER CHECK(quantidadeStock >= 0)   
 );
 
@@ -87,3 +87,46 @@ CREATE TABLE ProdutoDevolvido (
   quantidade            INTEGER CHECK (quantidade >= 0)               
 );
 
+-- Table: Compra
+DROP TABLE IF EXISTS Compra;
+CREATE TABLE Compra (
+  id                    INTEGER PRIMARY KEY,
+  data                  STRING NOT NULL,
+  montante              DOUBLE CHECK(montante > 0),
+  nif                   INTEGER REFERENCES Cliente (nif) CHECK(LENGTH(nif == 9)),
+  nomeE                 STRING REFERENCES Estabelecimento (nomeE)             
+);
+
+
+-- Table: ProdutoComprado
+DROP TABLE IF EXISTS ProdutoComprado;
+CREATE TABLE ProdutoComprado (
+  codigo                INTEGER REFERENCES Produto (codigo) PRIMARY KEY,
+  id                    INTEGER REFERENCES Compra (id),
+  quantidade            INTEGER CHECK(quantidade >= 0)        
+);
+
+-- Table: Estabelecimento
+DROP TABLE IF EXISTS Estabelecimento;
+CREATE TABLE Estabelecimento (
+  nomeE                 STRING PRIMARY KEY,
+  tipo                  STRING NOT NULL     
+);
+
+-- Table: HorarioFuncionamento
+DROP TABLE IF EXISTS HorarioFuncionamento;
+CREATE TABLE HorarioFuncionamento (
+  nomeE                 STRING REFERENCES Estabelecimento (nomeE) PRIMARY KEY,
+  data                  STRING,
+  horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  horaFim               STRING CHECK(horaFim > horaInicio) -- ou int nao sei
+);
+
+-- Table: HorarioTrabalho
+DROP TABLE IF EXISTS HorarioTrabalho;
+CREATE TABLE HorarioTrabalho (
+  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY,
+  data                  STRING,
+  horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  horaFim               STRING CHECK(horaFim > horaInicio) -- ou int nao sei
+);
