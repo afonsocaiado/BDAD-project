@@ -130,3 +130,5 @@ CREATE TABLE HorarioTrabalho (
   horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
   horaFim               STRING CHECK(horaFim > horaInicio) -- ou int nao sei
 );
+
+PRAGMA foreign_keys = on;
