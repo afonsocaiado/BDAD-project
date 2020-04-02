@@ -82,9 +82,10 @@ CREATE TABLE Devolucao (
 -- Table: ProdutoDevolvido
 DROP TABLE IF EXISTS ProdutoDevolvido;
 CREATE TABLE ProdutoDevolvido (
-  codigo                INTEGER REFERENCES Produto (codigo) PRIMARY KEY,
+  codigo                INTEGER REFERENCES Produto (codigo),
   id                    INTEGER REFERENCES Devolucao (id),
-  quantidade            INTEGER CHECK (quantidade >= 0)               
+  quantidade            INTEGER CHECK (quantidade >= 0),
+  PRIMARY KEY (codigo, id)               
 );
 
 -- Table: Compra
@@ -101,9 +102,10 @@ CREATE TABLE Compra (
 -- Table: ProdutoComprado
 DROP TABLE IF EXISTS ProdutoComprado;
 CREATE TABLE ProdutoComprado (
-  codigo                INTEGER REFERENCES Produto (codigo) PRIMARY KEY,
+  codigo                INTEGER REFERENCES Produto (codigo),
   id                    INTEGER REFERENCES Compra (id),
-  quantidade            INTEGER CHECK(quantidade >= 0)        
+  quantidade            INTEGER CHECK(quantidade >= 0),
+  PRIMARY KEY (codigo, id)        
 );
 
 -- Table: Estabelecimento
@@ -116,19 +118,21 @@ CREATE TABLE Estabelecimento (
 -- Table: HorarioFuncionamento
 DROP TABLE IF EXISTS HorarioFuncionamento;
 CREATE TABLE HorarioFuncionamento (
-  nomeE                 STRING REFERENCES Estabelecimento (nomeE) PRIMARY KEY,
+  nomeE                 STRING REFERENCES Estabelecimento (nomeE),
   data                  STRING,
   horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
-  horaFim               STRING CHECK(horaFim > horaInicio) -- ou int nao sei
+  horaFim               STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  PRIMARY KEY (nomeE, data)
 );
 
 -- Table: HorarioTrabalho
 DROP TABLE IF EXISTS HorarioTrabalho;
 CREATE TABLE HorarioTrabalho (
-  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY,
+  nif                   INTEGER REFERENCES Funcionario (nif),
   data                  STRING,
   horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
-  horaFim               STRING CHECK(horaFim > horaInicio) -- ou int nao sei
+  horaFim               STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  PRIMARY KEY (nif, data)
 );
 
 PRAGMA foreign_keys = on;
