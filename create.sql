@@ -20,40 +20,42 @@ CREATE TABLE PessoaFrequenteShopping (
   telefone              INTEGER CHECK (telefone >= 910000000 and telefone <= 969999999)       
 );
 
-/*
+
 -- Table: Cliente
 DROP TABLE IF EXISTS Cliente;
 CREATE TABLE Cliente (
-  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
   email                 STRING NOT NULL                     
 );
 
 -- Table: Funcionario
 DROP TABLE IF EXISTS Funcionario;
 CREATE TABLE Funcionario (
-  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
   salario               INTEGER CHECK(salario > 0)                    
+);
+
+
+-- Table: Estabelecimento
+DROP TABLE IF EXISTS Estabelecimento;
+CREATE TABLE Estabelecimento (
+  nomeE                 STRING PRIMARY KEY,
+  tipo                  STRING NOT NULL     
 );
 
 -- Table: FuncionarioEstabelecimento
 DROP TABLE IF EXISTS FuncionarioEstabelecimento;
 CREATE TABLE FuncionarioEstabelecimento (
-  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY ,
   nomeE                 STRING REFERENCES Estabelecimento (nomeE)                 
 );
+
 
 -- Table: FuncionarioShopping
 DROP TABLE IF EXISTS FuncionarioShopping;
 CREATE TABLE FuncionarioShopping (
-  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY,
   profissao             STRING NOT NULL                
-);
-
--- Table: Modelo
-DROP TABLE IF EXISTS Modelo;
-CREATE TABLE Modelo (
-  nomeModelo            STRING PRIMARY KEY NOT NULL,
-  nomeMarca             STRING REFERENCES Marca (nomeMarca) NOT NULL             
 );
 
 -- Table: Marca
@@ -62,14 +64,25 @@ CREATE TABLE Marca (
   nomeMarca             STRING PRIMARY KEY              
 );
 
+
+-- Table: Modelo
+DROP TABLE IF EXISTS Modelo;
+CREATE TABLE Modelo (
+  nomeModelo            STRING PRIMARY KEY NOT NULL,
+  nomeMarca             STRING REFERENCES Marca (nomeMarca) NOT NULL             
+);
+
+
+
 -- Table: Carro
 DROP TABLE IF EXISTS Carro;
 CREATE TABLE Carro (
-  matricula             INTEGER PRIMARY KEY,
+  matricula             STRING PRIMARY KEY,
   nomeMarca             STRING REFERENCES Marca (nomeMarca),
-  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) CHECK(LENGTH(nif == 9))     
+  nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif)     
 );
 
+/*
 -- Table: Produto
 DROP TABLE IF EXISTS Produto;
 CREATE TABLE Produto (
@@ -116,12 +129,6 @@ CREATE TABLE ProdutoComprado (
   PRIMARY KEY (codigo, id)        
 );
 
--- Table: Estabelecimento
-DROP TABLE IF EXISTS Estabelecimento;
-CREATE TABLE Estabelecimento (
-  nomeE                 STRING PRIMARY KEY,
-  tipo                  STRING NOT NULL     
-);
 
 -- Table: HorarioFuncionamento
 DROP TABLE IF EXISTS HorarioFuncionamento;

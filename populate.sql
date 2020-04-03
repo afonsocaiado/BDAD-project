@@ -8,15 +8,15 @@ INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Liberdade'
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto', 4150555);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Constituição', 4150444);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Boavista', 4150122);
-INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do fundo', 4222122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Fundo', 4222122);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Bandeirinha', 4150333);
-INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua grande', 4150232);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Grande', 4150232);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua 5 de maio', 4232122);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Doce', 4150232);
 
 
 -- Data : PessoaFrequenteShopping
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real',  9111111111);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real',  911111111);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (222222222, 'Tiago Delfim', 'Rua Gilberto Arenas', 912222222);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (333333333, 'Manuel de Oliveira', 'Rua da Esquerda', 913333333);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (444444444, 'Vitor Hugo', 'Avenida da Liberdade', 914444444);
@@ -24,18 +24,18 @@ INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (55555
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição',  915555555);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista',  916666666);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do Fundo',  917777777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 91888888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 918888888);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (101010101, 'Rony Lopes', 'Rua Grande',  919999999);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto',  915545555);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da Liberdade',  916667666);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio',  917737777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 91188888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 911888888);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (161616161, 'Fabio Miguel', 'Rua Doce',  919999199);
 
 
 
 
-/*
+
 
 -- Data : Cliente
 INSERT INTO Cliente (nif, email) VALUES (111111111, 'jcastro@gmail.com');
@@ -43,6 +43,7 @@ INSERT INTO Cliente (nif, email) VALUES (222222222, 'tdelfim@gmail.com');
 INSERT INTO Cliente (nif, email) VALUES (333333333, 'moliveira@gmail.com');
 INSERT INTO Cliente (nif, email) VALUES (444444444, 'vhugo@gmail.com');
 INSERT INTO Cliente (nif, email) VALUES (555555555, 'vferreira@gmail.com');
+
 
 -- Data : Funcionario
 INSERT INTO Funcionario (nif, salario) VALUES (666666666, 550);
@@ -83,6 +84,7 @@ INSERT INTO FuncionarioShopping (nif, profissao) VALUES (141414141, 'Seguranca')
 INSERT INTO FuncionarioShopping (nif, profissao) VALUES (151515151, 'Empregada');
 INSERT INTO FuncionarioShopping (nif, profissao) VALUES (161616161, 'Gerente');
 
+
 -- Data : Marca
 INSERT INTO Marca (nomeMarca) VALUES ('Mercedes Benz');
 INSERT INTO Marca (nomeMarca) VALUES ('Volkswagen');
@@ -121,4 +123,3 @@ INSERT INTO Carro (matricula, nomeMarca, nif) VALUES ('00TY01', 'Fiat', 16161616
 
 
 
-*/
