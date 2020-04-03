@@ -2,15 +2,23 @@ PRAGMA foreign_keys = on;
 .mode columns
 .headers on
 .nullvalue NULL
+.width 20 20 20 20 20
+
+-- Table: Morada_CPostal
+DROP TABLE IF EXISTS Morada_CPostal;
+CREATE TABLE Morada_CPostal(
+  morada                STRING PRIMARY KEY,
+  codigoPostal          INTEGER NOT NULL
+
+);
 
 -- Table: PessoaFrequenteShopping
 DROP TABLE IF EXISTS PessoaFrequenteShopping;
 CREATE TABLE PessoaFrequenteShopping (
-  nif                   INTEGER PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
   nome                  STRING NOT NULL,
-  morada                STRING,
-  codigoPostal          INTEGER,
-  telefone              INTEGER CHECK(LENGTH(telefone == 9))         
+  morada                STRING REFERENCES Morada_CPostal ( morada ),
+  telefone              INTEGER CHECK (telefone >= 910000000 and telefone <= 969999999)      
 );
 
 -- Table: Cliente
@@ -24,7 +32,7 @@ CREATE TABLE Cliente (
 DROP TABLE IF EXISTS Funcionario;
 CREATE TABLE Funcionario (
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY CHECK(LENGTH(nif == 9)),
-  salario               INTEGER CHECK(salario > 0)                    
+  salario               DOUBLE CHECK(salario > 0)                    
 );
 
 -- Table: FuncionarioEstabelecimento
@@ -57,7 +65,7 @@ CREATE TABLE Marca (
 -- Table: Carro
 DROP TABLE IF EXISTS Carro;
 CREATE TABLE Carro (
-  matricula             INTEGER PRIMARY KEY,
+  matricula             STRING PRIMARY KEY,
   nomeMarca             STRING REFERENCES Marca (nomeMarca),
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) CHECK(LENGTH(nif == 9))     
 );
@@ -120,8 +128,9 @@ DROP TABLE IF EXISTS HorarioFuncionamento;
 CREATE TABLE HorarioFuncionamento (
   nomeE                 STRING REFERENCES Estabelecimento (nomeE),
   data                  STRING,
-  horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
-  horaFim               STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  horaInicio            STRING CHECK (LENGTH(horaInicio) = 5), -- ou int nao sei
+  horaFim               STRING CHECK (LENGTH(horaFim) = 5), -- ou int nao sei
+  CHECK(horaFim > horaInicio)
   PRIMARY KEY (nomeE, data)
 );
 
@@ -130,8 +139,9 @@ DROP TABLE IF EXISTS HorarioTrabalho;
 CREATE TABLE HorarioTrabalho (
   nif                   INTEGER REFERENCES Funcionario (nif),
   data                  STRING,
-  horaInicio            STRING CHECK(horaFim > horaInicio), -- ou int nao sei
-  horaFim               STRING CHECK(horaFim > horaInicio), -- ou int nao sei
+  horaInicio            STRING CHECK (LENGTH(horaInicio) = 5), -- ou int nao sei
+  horaFim               STRING CHECK (LENGTH(horaFim) = 5), -- ou int nao sei
+  CHECK(horaFim > horaInicio)
   PRIMARY KEY (nif, data)
 );
 

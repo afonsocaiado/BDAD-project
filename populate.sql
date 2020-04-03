@@ -1,20 +1,34 @@
 
+--Data : Morada_CPostal
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Corte Real', 4150888);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Gilberto Arenas', 4150888);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Esquerda', 4150777);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Liberdade', 4150666);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto', 4150555);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Constituição', 4150444);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Boavista', 4150122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Fundo', 4222122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Bandeirinha', 4150333);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Grande', 4150232);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua 5 de maio', 4232122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Doce', 4150232);
+
 -- Data : PessoaFrequenteShopping
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real', 4150888, 9111111111);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (222222222, 'Tiago Delfim', 'Rua Gilberto Arenas', 4150888, 912222222);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (333333333, 'Manuel de Oliveira', 'Rua da Esquerda', 4150777, 913333333);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (444444444, 'Vitor Hugo', 'Avenida da Liberdade', 4150666, 914444444);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (555555555, 'Vasco Ferreira', 'Rua do Crasto', 4150555, 910000000);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição', 4150444, 915555555);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista', 4150122, 916666666);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do fundo', 4222122, 917777777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 4150333, 91888888);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (101010101, 'Rony Lopes', 'Rua grande', 4150232, 919999999);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto', 4150989, 915545555);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da liberdade', 4150121, 916667666);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio', 4232122, 917737777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 4150331, 91188888);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (161616161, 'Fabio Miguel', 'Rua Doce', 4150232, 919999199);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real',  911111111);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (222222222, 'Tiago Delfim', 'Rua Gilberto Arenas', 912222222);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (333333333, 'Manuel de Oliveira', 'Rua da Esquerda', 913333333);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (444444444, 'Vitor Hugo', 'Avenida da Liberdade', 914444444);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (555555555, 'Vasco Ferreira', 'Rua do Crasto',  910000000);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição',  915555555);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista',  916666666);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do Fundo',  917777777);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 918888888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (101010101, 'Rony Lopes', 'Rua Grande',  919999999);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto',  915545555);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da Liberdade',  916667666);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio',  917737777);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 911888888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (161616161, 'Fabio Miguel', 'Rua Doce',  919999199);
 
 -- Data : Cliente
 INSERT INTO Cliente (nif, email) VALUES (111111111, 'jcastro@gmail.com');
@@ -34,7 +48,6 @@ INSERT INTO Funcionario (nif, salario) VALUES (131313131, 670.99);
 INSERT INTO Funcionario (nif, salario) VALUES (141414141, 330);
 INSERT INTO Funcionario (nif, salario) VALUES (151515151, 580);
 INSERT INTO Funcionario (nif, salario) VALUES (161616161, 1000);
-
 
 -- Data : Estabelecimento
 INSERT INTO Estabelecimento (nomeE, tipo) VALUES ('Zara', 'Loja');
@@ -98,5 +111,59 @@ INSERT INTO Carro (matricula, nomeMarca, nif) VALUES ('88QW99', 'Renault', 12121
 INSERT INTO Carro (matricula, nomeMarca, nif) VALUES ('99ER00', 'Opel', 131313131);
 INSERT INTO Carro (matricula, nomeMarca, nif) VALUES ('00TY01', 'Fiat', 161616161);
 
+-- Data : Produto
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Bilhete Avengers', 1, 6.75, 50);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Chapéu', 2, 15, 5);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Entrada Bowling', 3, 10, 100);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Vestido Vermelho', 4, 12.99, 3);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Happy Meal', 5, 4.25, 100);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Big Mac', 6, 3.25, 100);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Caneca', 7, 2.99, 1);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Peluche Urso', 8, 10, 4);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Café', 9, 0.95, 50);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Frango', 10, 6.75, 20);
+
+-- Data : Devolucao
+INSERT INTO Devolucao (id, data, nif) VALUES (1, '23/02/2020', 111111111);
+INSERT INTO Devolucao (id, data, nif) VALUES (2, '24/02/2020', 444444444);
+
+-- Data : ProdutoDevolvido
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (4, 1, 1);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (8, 2, 2);
+
+-- Data : Compra
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (1, "20/02/2020", 2.99, 111111111, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (2, "20/02/2020", 12.99, 111111111, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (3, "20/02/2020", 12.99, 222222222, 'Zara');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (4, "25/02/2020", 3.25, 555555555, 'McDonalds');
+
+-- Data : ProdutoComprado
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (7, 1, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (4, 2, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (4, 3, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (6, 4, 2);
+
+-- Data : HorarioFuncionamento
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Zara', '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('HM', '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Cinemas NOS', '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Bowling', '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('McDonalds', '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Primark', '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('FNAC', '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('H3', '20/02/2020', '10:00', '22:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Pull Bear', '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Continente', '20/02/2020', '08:00', '24:00');
 
 
+-- Data : HorarioTrabalho
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (666666666, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (777777777, '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (888888888, '20/02/2020', '10:00', '22:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (999999999, '20/02/2020', '10:00', '23:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (101010101, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (121212121, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (131313131, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (141414141, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (151515151, '20/02/2020', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (161616161, '20/02/2020', '08:00', '24:00');
