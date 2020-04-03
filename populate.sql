@@ -23,3 +23,15 @@ INSERT INTO Cliente (nif, email) VALUES (888888888, 'tfreitas@gmail.com');
 INSERT INTO Cliente (nif, email) VALUES (999999999, 'rteixeira@gmail.com');
 INSERT INTO Cliente (nif, email) VALUES (101010101, 'rlopes@gmail.com');
 
+-- Data : Funcionario
+INSERT INTO Funcionario (nif, salario) VALUES (111111111, 436.49);
+INSERT INTO Funcionario (nif, salario) VALUES (222222222, 500);
+INSERT INTO Funcionario (nif, salario) VALUES (333333333, 4000.49);
+INSERT INTO Funcionario (nif, salario) VALUES (444444444, 780.99);
+INSERT INTO Funcionario (nif, salario) VALUES (555555555, 12000.99);
+INSERT INTO Funcionario (nif, salario) VALUES (666666666, 550);
+INSERT INTO Funcionario (nif, salario) VALUES (777777777, 150.50);
+INSERT INTO Funcionario (nif, salario) VALUES (888888888, 100000);
+INSERT INTO Funcionario (nif, salario) VALUES (999999999, 430);
+INSERT INTO Funcionario (nif, salario) VALUES (101010101, 420.49);
+
