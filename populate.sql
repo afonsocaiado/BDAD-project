@@ -23,9 +23,9 @@ INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (44444
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (555555555, 'Vasco Ferreira', 'Rua do Crasto',  910000000);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição',  915555555);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista',  916666666);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do fundo',  917777777);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do Fundo',  917777777);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 91888888);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (101010101, 'Rony Lopes', 'Rua grande',  919999999);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (101010101, 'Rony Lopes', 'Rua Grande',  919999999);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto',  915545555);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da Liberdade',  916667666);
 INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio',  917737777);

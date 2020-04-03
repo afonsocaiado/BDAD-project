@@ -1,4 +1,4 @@
-PRAGMA foreign_keys = on;
+PRAGMA foreign_keys=on;
 .mode columns
 .headers on
 .nullvalue NULL
@@ -14,10 +14,10 @@ CREATE TABLE Morada_CPostal(
 -- Table: PessoaFrequenteShopping
 DROP TABLE IF EXISTS PessoaFrequenteShopping;
 CREATE TABLE PessoaFrequenteShopping (
-  nif                   INTEGER PRIMARY KEY CHECK(LENGTH(nif == 9)),
+  nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
   nome                  STRING NOT NULL,
   morada                STRING REFERENCES Morada_CPostal ( morada ),
-  telefone              INTEGER CHECK (LENGTH(telefone == 9))         
+  telefone              INTEGER CHECK (telefone >= 910000000 and telefone <= 969999999)       
 );
 
 /*
