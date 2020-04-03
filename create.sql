@@ -3,15 +3,22 @@ PRAGMA foreign_keys = on;
 .headers on
 .nullvalue NULL
 
+DROP TABLE IF EXISTS Morada_CPostal;
+CREATE TABLE Morada_CPostal(
+  morada                STRING PRIMARY KEY,
+  codigoPostal          INTEGER NOT NULL
+
+);
+
 -- Table: PessoaFrequenteShopping
 DROP TABLE IF EXISTS PessoaFrequenteShopping;
 CREATE TABLE PessoaFrequenteShopping (
   nif                   INTEGER PRIMARY KEY CHECK(LENGTH(nif == 9)),
   nome                  STRING NOT NULL,
-  morada                STRING,
-  codigoPostal          INTEGER,
-  telefone              INTEGER CHECK(LENGTH(telefone == 9))         
+  morada                STRING REFERENCES Morada_CPostal ( morada ),
+  telefone              INTEGER CHECK (LENGTH(telefone == 9))         
 );
+
 
 -- Table: Cliente
 DROP TABLE IF EXISTS Cliente;

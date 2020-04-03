@@ -1,20 +1,41 @@
 
 -- Data : PessoaFrequenteShopping
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real', 4150888, 9111111111);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (222222222, 'Tiago Delfim', 'Rua Gilberto Arenas', 4150888, 912222222);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (333333333, 'Manuel de Oliveira', 'Rua da Esquerda', 4150777, 913333333);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (444444444, 'Vitor Hugo', 'Avenida da Liberdade', 4150666, 914444444);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (555555555, 'Vasco Ferreira', 'Rua do Crasto', 4150555, 910000000);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição', 4150444, 915555555);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista', 4150122, 916666666);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do fundo', 4222122, 917777777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 4150333, 91888888);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (101010101, 'Rony Lopes', 'Rua grande', 4150232, 919999999);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto', 4150989, 915545555);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da liberdade', 4150121, 916667666);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio', 4232122, 917737777);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 4150331, 91188888);
-INSERT INTO PessoaFrequenteShopping (nif, nome, morada, codigoPostal, telefone) VALUES (161616161, 'Fabio Miguel', 'Rua Doce', 4150232, 919999199);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (111111111, 'João Castro', 'Rua Corte Real', 4150888, 9111111111);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (222222222, 'Tiago Delfim', 'Rua Gilberto Arenas', 4150888, 912222222);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (333333333, 'Manuel de Oliveira', 'Rua da Esquerda', 4150777, 913333333);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (444444444, 'Vitor Hugo', 'Avenida da Liberdade', 4150666, 914444444);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (555555555, 'Vasco Ferreira', 'Rua do Crasto', 4150555, 910000000);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (666666666, 'Carolina Mengo', 'Constituição', 4150444, 915555555);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (777777777, 'Miguel Afonso', 'Avenida da Boavista', 4150122, 916666666);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (888888888, 'Tomas Freitas', 'Rua do fundo', 4222122, 917777777);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (999999999, 'Rui Teixeira', 'Rua da Bandeirinha', 4150333, 91888888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (101010101, 'Rony Lopes', 'Rua grande', 4150232, 919999999);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (121212121, 'Joao Sousa', 'Rua do Crasto', 4150989, 915545555);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (131313131, 'Antonio Correia', 'Avenida da liberdade', 4150121, 916667666);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (141414141, 'Armando Correia', 'Rua 5 de maio', 4232122, 917737777);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (151515151, 'Miguel Gama', 'Rua do Crasto', 4150331, 91188888);
+INSERT INTO PessoaFrequenteShopping (nif, nome, morada,  telefone) VALUES (161616161, 'Fabio Miguel', 'Rua Doce', 4150232, 919999199);
+
+--Data : Morada_CPostal
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Corte Real', 4150888);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Gilberto Arenas', 4150888);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Esquerda', 4150777);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Liberdade', 4150666);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto', 4150555);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Constituição', 4150444);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Boavista', 4150122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do fundo', 4222122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Bandeirinha', 4150333);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua grande', 4150232);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto', 4150989);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da liberdade', 4150121);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua 5 de maio', 4232122);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto', 4150331);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Doce', 4150232);
+
+
+
+
 
 -- Data : Cliente
 INSERT INTO Cliente (nif, email) VALUES (111111111, 'jcastro@gmail.com');
