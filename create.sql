@@ -2,6 +2,7 @@ PRAGMA foreign_keys = on;
 .mode columns
 .headers on
 .nullvalue NULL
+.width 20 20 20 20 20
 
 DROP TABLE IF EXISTS Morada_CPostal;
 CREATE TABLE Morada_CPostal(
@@ -19,7 +20,7 @@ CREATE TABLE PessoaFrequenteShopping (
   telefone              INTEGER CHECK (LENGTH(telefone == 9))         
 );
 
-
+/*
 -- Table: Cliente
 DROP TABLE IF EXISTS Cliente;
 CREATE TABLE Cliente (
@@ -142,4 +143,4 @@ CREATE TABLE HorarioTrabalho (
   PRIMARY KEY (nif, data)
 );
 
-PRAGMA foreign_keys = on;
+*/
