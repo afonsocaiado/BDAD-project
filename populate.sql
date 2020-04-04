@@ -125,23 +125,41 @@ INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Fra
 
 -- Data : Devolucao
 INSERT INTO Devolucao (id, data, nif) VALUES (1, '23/02/2020', 111111111);
-INSERT INTO Devolucao (id, data, nif) VALUES (2, '24/02/2020', 444444444);
+INSERT INTO Devolucao (id, data, nif) VALUES (2, '24/02/2020', 111111111);
+INSERT INTO Devolucao (id, data, nif) VALUES (3, '23/02/2020', 555555555);
+INSERT INTO Devolucao (id, data, nif) VALUES (4, '24/02/2020', 222222222);
+INSERT INTO Devolucao (id, data, nif) VALUES (5, '23/02/2020', 333333333);
 
 -- Data : ProdutoDevolvido
-INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (4, 1, 1);
-INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (8, 2, 2);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (7, 1, 1);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (4, 2, 1);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (6, 3, 1);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (4, 4, 1);
+INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (8, 5, 1);
 
 -- Data : Compra
 INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (1, "20/02/2020", 2.99, 111111111, 'Primark');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (2, "20/02/2020", 12.99, 111111111, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (2, "20/02/2020", 12.99, 111111111, 'Pull Bear');
 INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (3, "20/02/2020", 12.99, 222222222, 'Zara');
 INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (4, "25/02/2020", 3.25, 555555555, 'McDonalds');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (5, "25/02/2020", 6.75, 444444444, 'Continente');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (6, "20/02/2020", 6.75, 444444444, 'Cinemas NOS');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (7, "20/02/2020", 10, 333333333, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (8, "20/02/2020", 10, 222222222, 'Bowling');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (9, "25/02/2020", 0.95, 555555555, 'McDonalds');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (10, "25/02/2020", 4.25, 555555555, 'McDonalds');
 
 -- Data : ProdutoComprado
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (7, 1, 1);
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (4, 2, 1);
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (4, 3, 1);
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (6, 4, 2);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (10, 5, 3);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (1, 6, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (8, 7, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (3, 8, 1);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (9, 9, 2);
+INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (5, 10, 3);
 
 -- Data : HorarioFuncionamento
 INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Zara', '20/02/2020', '10:00', '23:00');
