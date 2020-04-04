@@ -6,7 +6,7 @@ PRAGMA foreign_keys=on;
 
 DROP TABLE IF EXISTS Morada_CPostal;
 CREATE TABLE Morada_CPostal(
-  morada                STRING PRIMARY KEY,
+  morada                VARCHAR(255) PRIMARY KEY,
   codigoPostal          INTEGER NOT NULL
 
 );
@@ -15,8 +15,8 @@ CREATE TABLE Morada_CPostal(
 DROP TABLE IF EXISTS PessoaFrequenteShopping;
 CREATE TABLE PessoaFrequenteShopping (
   nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
-  nome                  STRING NOT NULL,
-  morada                STRING REFERENCES Morada_CPostal ( morada ),
+  nome                  VARCHAR(255) NOT NULL,
+  morada                VARCHAR(255) REFERENCES Morada_CPostal ( morada ),
   telefone              INTEGER CHECK (telefone >= 910000000 and telefone <= 969999999)       
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE PessoaFrequenteShopping (
 DROP TABLE IF EXISTS Cliente;
 CREATE TABLE Cliente (
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
-  email                 STRING NOT NULL                     
+  email                 VARCHAR(255) NOT NULL                     
 );
 
 -- Table: Funcionario
@@ -39,15 +39,15 @@ CREATE TABLE Funcionario (
 -- Table: Estabelecimento
 DROP TABLE IF EXISTS Estabelecimento;
 CREATE TABLE Estabelecimento (
-  nomeE                 STRING PRIMARY KEY,
-  tipo                  STRING NOT NULL     
+  nomeE                 VARCHAR(255) PRIMARY KEY,
+  tipo                  VARCHAR(255) NOT NULL     
 );
 
 -- Table: FuncionarioEstabelecimento
 DROP TABLE IF EXISTS FuncionarioEstabelecimento;
 CREATE TABLE FuncionarioEstabelecimento (
   nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY ,
-  nomeE                 STRING REFERENCES Estabelecimento (nomeE)                 
+  nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE)                 
 );
 
 
@@ -55,21 +55,21 @@ CREATE TABLE FuncionarioEstabelecimento (
 DROP TABLE IF EXISTS FuncionarioShopping;
 CREATE TABLE FuncionarioShopping (
   nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY,
-  profissao             STRING NOT NULL                
+  profissao             VARCHAR(255) NOT NULL                
 );
 
 -- Table: Marca
 DROP TABLE IF EXISTS Marca;
 CREATE TABLE Marca (
-  nomeMarca             STRING PRIMARY KEY              
+  nomeMarca             VARCHAR(255) PRIMARY KEY              
 );
 
 
 -- Table: Modelo
 DROP TABLE IF EXISTS Modelo;
 CREATE TABLE Modelo (
-  nomeModelo            STRING PRIMARY KEY NOT NULL,
-  nomeMarca             STRING REFERENCES Marca (nomeMarca) NOT NULL             
+  nomeModelo            VARCHAR(255) PRIMARY KEY NOT NULL,
+  nomeMarca             VARCHAR(255) REFERENCES Marca (nomeMarca) NOT NULL             
 );
 
 
@@ -77,8 +77,8 @@ CREATE TABLE Modelo (
 -- Table: Carro
 DROP TABLE IF EXISTS Carro;
 CREATE TABLE Carro (
-  matricula             STRING PRIMARY KEY,
-  nomeMarca             STRING REFERENCES Marca (nomeMarca),
+  matricula             VARCHAR(8) PRIMARY KEY,
+  nomeMarca             VARCHAR(255) REFERENCES Marca (nomeMarca),
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif)     
 );
 
@@ -86,7 +86,7 @@ CREATE TABLE Carro (
 -- Table: Produto
 DROP TABLE IF EXISTS Produto;
 CREATE TABLE Produto (
-  nomeP                 STRING NOT NULL,
+  nomeP                 VARCHAR(255) NOT NULL,
   codigo                INTEGER PRIMARY KEY,
   custoUnitario         REAL CHECK(custoUnitario > 0),
   quantidadeStock       INTEGER CHECK(quantidadeStock >= 0)   
@@ -96,7 +96,7 @@ CREATE TABLE Produto (
 DROP TABLE IF EXISTS Devolucao;
 CREATE TABLE Devolucao (
   id                    INTEGER PRIMARY KEY,
-  data                  STRING NOT NULL, -- ou int nao sei  
+  data                  STRING NOT NULL, -- TODO CHECK DATE TYPE
   nif                   INTEGER REFERENCES Cliente (nif)                   
 );
 
@@ -113,10 +113,10 @@ CREATE TABLE ProdutoDevolvido (
 DROP TABLE IF EXISTS Compra;
 CREATE TABLE Compra (
   id                    INTEGER PRIMARY KEY,
-  data                  STRING NOT NULL CHECK (length(data) = 10), -- do tipo DD-MM-YYYY
+  data                  VARCHAR(10) NOT NULL CHECK (data >= '01/01/2019' and data <= '31/2/2021'), -- do tipo DD-MM-YYYY
   montante              REAL CHECK(montante > 0),
   nif                   INTEGER REFERENCES Cliente (nif),
-  nomeE                 STRING REFERENCES Estabelecimento (nomeE)             
+  nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE)             
 );
 
 
@@ -133,10 +133,10 @@ CREATE TABLE ProdutoComprado (
 -- Table: HorarioFuncionamento
 DROP TABLE IF EXISTS HorarioFuncionamento;
 CREATE TABLE HorarioFuncionamento (
-  nomeE                 STRING REFERENCES Estabelecimento (nomeE),
-  data                  STRING,
-  horaInicio            STRING CHECK(length(horaInicio) = 5), -- do tipo HH:MM
-  horaFim               STRING CHECK(length(horaInicio) = 5 and horaFim > horaInicio), 
+  nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE),
+  data                  VARCHAR(10) NOT NULL,
+  horaInicio            VARCHAR(5) CHECK( length(horaInicio) = 5 and horaInicio >= '00:00' and horaInicio <=  '24:00'), -- do tipo HH:MM
+  horaFim               VARCHAR(5) CHECK(length(horaFim) = 5 and  horaFim > horaInicio and horaFim >= '00:00' and horaFim <= '24:00'), 
   PRIMARY KEY (nomeE, data)
 );
 
@@ -144,9 +144,8 @@ CREATE TABLE HorarioFuncionamento (
 DROP TABLE IF EXISTS HorarioTrabalho;
 CREATE TABLE HorarioTrabalho (
   nif                   INTEGER REFERENCES Funcionario (nif),
-  data                  STRING,
-  horaInicio            STRING CHECK(length(horaInicio) = 5), -- do tipo HH:MM
-  horaFim               STRING CHECK(length(horaInicio) = 5 and horaFim > horaInicio), 
+  data                  VARCHAR(10) NOT NULL, --CHECK (data >= '2019-01-01' and data <= '2022-12-31'),
+  horaInicio            VARCHAR(5) CHECK( length(horaInicio) = 5 and horaInicio >= '00:00' and horaInicio <=  '24:00'), -- do tipo HH:MM
+  horaFim               VARCHAR(5) CHECK(length(horaFim) = 5 and horaFim > horaInicio and horaFim >= '00:00' and horaFim <= '24:00'), 
   PRIMARY KEY (nif, data)
 );
-
