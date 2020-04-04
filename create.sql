@@ -17,7 +17,7 @@ CREATE TABLE PessoaFrequenteShopping (
   nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
   nome                  VARCHAR(255) NOT NULL,
   morada                VARCHAR(255) REFERENCES Morada_CPostal ( morada ),
-  telefone              INTEGER CHECK (telefone >= 910000000 and telefone <= 969999999)       
+  telefone              INTEGER UNIQUE CHECK (telefone >= 910000000 and telefone <= 969999999)       
 );
 
 
@@ -25,7 +25,7 @@ CREATE TABLE PessoaFrequenteShopping (
 DROP TABLE IF EXISTS Cliente;
 CREATE TABLE Cliente (
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
-  email                 VARCHAR(255) NOT NULL                     
+  email                 VARCHAR(255) UNIQUE NOT NULL                     
 );
 
 -- Table: Funcionario
