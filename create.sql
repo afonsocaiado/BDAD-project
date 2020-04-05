@@ -2,8 +2,7 @@ PRAGMA foreign_keys=on;
 .mode columns
 .headers on
 .nullvalue NULL
-.width 20 20 35 20 20
-
+.width 35 20 35 20 20 20 20 20
 DROP TABLE IF EXISTS Morada_CPostal;
 CREATE TABLE Morada_CPostal(
   morada                VARCHAR(255) PRIMARY KEY,
