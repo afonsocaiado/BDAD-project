@@ -2,7 +2,7 @@ PRAGMA foreign_keys=on;
 .mode columns
 .headers on
 .nullvalue NULL
-.width 30 30 30 30 30
+.width 20 20 35 20 20
 
 DROP TABLE IF EXISTS Morada_CPostal;
 CREATE TABLE Morada_CPostal(
