@@ -3,7 +3,41 @@ PRAGMA foreign_keys=on;
 .headers on
 .nullvalue NULL
 .width 35 20 35 20 20 20 20 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROP TABLE IF EXISTS HorarioTrabalho;
+DROP TABLE IF EXISTS HorarioFuncionamento;
+DROP TABLE IF EXISTS ProdutoComprado;
+DROP TABLE IF EXISTS Compra;
+DROP TABLE IF EXISTS ProdutoDevolvido;
+DROP TABLE IF EXISTS Devolucao;
+DROP TABLE IF EXISTS Produto;
+DROP TABLE IF EXISTS Carro;
+DROP TABLE IF EXISTS Modelo;
+DROP TABLE IF EXISTS Marca;
+DROP TABLE IF EXISTS FuncionarioShopping;
+DROP TABLE IF EXISTS FuncionarioEstabelecimento;
+DROP TABLE IF EXISTS Estabelecimento;
+DROP TABLE IF EXISTS Funcionario;
+DROP TABLE IF EXISTS Cliente;
+DROP TABLE IF EXISTS PessoaFrequenteShopping;
 DROP TABLE IF EXISTS Morada_CPostal;
+
+
+
+
+
 CREATE TABLE Morada_CPostal(
   morada                VARCHAR(255) PRIMARY KEY,
   codigoPostal          INTEGER NOT NULL
@@ -11,7 +45,7 @@ CREATE TABLE Morada_CPostal(
 );
 
 -- Table: PessoaFrequenteShopping
-DROP TABLE IF EXISTS PessoaFrequenteShopping;
+
 CREATE TABLE PessoaFrequenteShopping (
   nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
   nome                  VARCHAR(255) NOT NULL,
@@ -21,14 +55,14 @@ CREATE TABLE PessoaFrequenteShopping (
 
 
 -- Table: Cliente
-DROP TABLE IF EXISTS Cliente;
+
 CREATE TABLE Cliente (
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
   email                 VARCHAR(255) UNIQUE NOT NULL                     
 );
 
 -- Table: Funcionario
-DROP TABLE IF EXISTS Funcionario;
+
 CREATE TABLE Funcionario (
   nif                   INTEGER REFERENCES PessoaFrequenteShopping (nif) PRIMARY KEY,
   salario               INTEGER CHECK(salario > 0)                    
@@ -36,14 +70,14 @@ CREATE TABLE Funcionario (
 
 
 -- Table: Estabelecimento
-DROP TABLE IF EXISTS Estabelecimento;
+
 CREATE TABLE Estabelecimento (
   nomeE                 VARCHAR(255) PRIMARY KEY,
   tipo                  VARCHAR(255) NOT NULL     
 );
 
 -- Table: FuncionarioEstabelecimento
-DROP TABLE IF EXISTS FuncionarioEstabelecimento;
+
 CREATE TABLE FuncionarioEstabelecimento (
   nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY ,
   nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE)                 
@@ -51,21 +85,21 @@ CREATE TABLE FuncionarioEstabelecimento (
 
 
 -- Table: FuncionarioShopping
-DROP TABLE IF EXISTS FuncionarioShopping;
+
 CREATE TABLE FuncionarioShopping (
   nif                   INTEGER REFERENCES Funcionario (nif) PRIMARY KEY,
   profissao             VARCHAR(255) NOT NULL                
 );
 
 -- Table: Marca
-DROP TABLE IF EXISTS Marca;
+
 CREATE TABLE Marca (
   nomeMarca             VARCHAR(255) PRIMARY KEY              
 );
 
 
 -- Table: Modelo
-DROP TABLE IF EXISTS Modelo;
+
 CREATE TABLE Modelo (
   nomeModelo            VARCHAR(255) PRIMARY KEY NOT NULL,
   nomeMarca             VARCHAR(255) REFERENCES Marca (nomeMarca) NOT NULL             
@@ -74,7 +108,7 @@ CREATE TABLE Modelo (
 
 
 -- Table: Carro
-DROP TABLE IF EXISTS Carro;
+
 CREATE TABLE Carro (
   matricula             VARCHAR(8) PRIMARY KEY,
   nomeMarca             VARCHAR(255) REFERENCES Marca (nomeMarca),
@@ -83,7 +117,7 @@ CREATE TABLE Carro (
 
 
 -- Table: Produto
-DROP TABLE IF EXISTS Produto;
+
 CREATE TABLE Produto (
   nomeP                 VARCHAR(255) NOT NULL,
   codigo                INTEGER PRIMARY KEY,
@@ -92,7 +126,7 @@ CREATE TABLE Produto (
 );
 
 -- Table: Devolucao
-DROP TABLE IF EXISTS Devolucao;
+
 CREATE TABLE Devolucao (
   id                    INTEGER PRIMARY KEY,
   data                  STRING NOT NULL, -- TODO CHECK DATE TYPE
@@ -100,7 +134,7 @@ CREATE TABLE Devolucao (
 );
 
 -- Table: ProdutoDevolvido
-DROP TABLE IF EXISTS ProdutoDevolvido;
+
 CREATE TABLE ProdutoDevolvido (
   codigo                INTEGER REFERENCES Produto (codigo),
   id                    INTEGER REFERENCES Devolucao (id),
@@ -109,7 +143,7 @@ CREATE TABLE ProdutoDevolvido (
 );
 
 -- Table: Compra
-DROP TABLE IF EXISTS Compra;
+
 CREATE TABLE Compra (
   id                    INTEGER PRIMARY KEY,
   data                  VARCHAR(10) NOT NULL CHECK (data >= '01/01/2019' and data <= '31/2/2021'), -- do tipo DD-MM-YYYY
@@ -120,7 +154,7 @@ CREATE TABLE Compra (
 
 
 -- Table: ProdutoComprado
-DROP TABLE IF EXISTS ProdutoComprado;
+
 CREATE TABLE ProdutoComprado (
   codigo                INTEGER REFERENCES Produto (codigo),
   id                    INTEGER REFERENCES Compra (id),
@@ -130,7 +164,7 @@ CREATE TABLE ProdutoComprado (
 
 
 -- Table: HorarioFuncionamento
-DROP TABLE IF EXISTS HorarioFuncionamento;
+
 CREATE TABLE HorarioFuncionamento (
   nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE),
   data                  VARCHAR(10) NOT NULL,
@@ -140,7 +174,7 @@ CREATE TABLE HorarioFuncionamento (
 );
 
 -- Table: HorarioTrabalho
-DROP TABLE IF EXISTS HorarioTrabalho;
+
 CREATE TABLE HorarioTrabalho (
   nif                   INTEGER REFERENCES Funcionario (nif),
   data                  VARCHAR(10) NOT NULL, --CHECK (data >= '2019-01-01' and data <= '2022-12-31'),

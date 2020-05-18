@@ -2,7 +2,7 @@
 --Data : Morada_CPostal
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua de Mouzinho da Silveira, 1', 4150202);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua de Corte Real, 676', 4150111);
-INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Gilberto Arenas, 220', 4150222);
+INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua Gilberto Arenas, 220', 4150202);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua da Esquerda, 788', 4150333);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Avenida da Liberdade, 33', 4150444);
 INSERT INTO Morada_CPostal (morada, codigoPostal) VALUES ('Rua do Crasto, 1870', 4150555);
