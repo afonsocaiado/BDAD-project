@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=on;
+
 -- Gatilho que verifica, antes de fazer a compra, se o stock do produto
 -- é suficiente. Se não for, não irá completar a compra
 
@@ -29,7 +31,4 @@ BEGIN
 
 
 END;
-
---INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (15, "25/02/2020", 5.98, 111111111, 'Primark');
---INSERT INTO ProdutoComprado(codigo, id, quantidade) VALUES (7, 15, 2);
 

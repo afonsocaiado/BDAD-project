@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=on;
+
 -- Gatilho que adiciona à loja o número de produtos devolvidos
 
 CREATE TRIGGER IF NOT EXISTS atualizaStock
@@ -8,3 +10,4 @@ BEGIN
     SET quantidadeStock = quantidadeStock + NEW.quantidade 
 	WHERE Produto.codigo = NEW.codigo;
 END;
+
