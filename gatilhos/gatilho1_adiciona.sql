@@ -1,6 +1,6 @@
 -- Gatilho que adiciona à loja o número de produtos devolvidos
 
-CREATE TRIGGER atualizaStock
+CREATE TRIGGER IF NOT EXISTS atualizaStock
 AFTER INSERT ON ProdutoDevolvido
 FOR EACH ROW
 BEGIN

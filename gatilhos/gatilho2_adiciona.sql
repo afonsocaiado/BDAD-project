@@ -1,6 +1,6 @@
 -- Gatilho que adiciona à loja o número de produtos devolvidos
 
-CREATE TRIGGER verificaEmail
+CREATE TRIGGER IF NOT EXISTS verificaEmail
 BEFORE INSERT ON Cliente
 When New.email NOT LIKE "%@%.%"
 BEGIN
