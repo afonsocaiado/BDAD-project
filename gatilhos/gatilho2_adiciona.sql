@@ -1,6 +1,6 @@
 PRAGMA foreign_keys=on;
 
--- Gatilho que adiciona à loja o número de produtos devolvidos
+-- Gatilho que verifica se o email está no formato correto
 
 CREATE TRIGGER IF NOT EXISTS verificaEmail
 BEFORE INSERT ON Cliente
