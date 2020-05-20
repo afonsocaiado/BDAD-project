@@ -8,3 +8,4 @@ When New.email NOT LIKE "%@%.%"
 BEGIN
 	Select raise(ignore);
 END;
+
