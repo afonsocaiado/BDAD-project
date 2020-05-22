@@ -185,6 +185,7 @@ INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Can
 INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Peluche Urso', 8, 10, 4);
 INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Café', 9, 0.95, 50);
 INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Frango', 10, 6.75, 20);
+INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Camisola', 11, 9.99, 5);
 
 -- Data : Devolucao
 INSERT INTO Devolucao (id, data, nif) VALUES (1, '2020/02/23', 111111111);
