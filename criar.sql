@@ -146,7 +146,7 @@ CREATE TABLE ProdutoDevolvido (
 
 CREATE TABLE Compra (
   id                    INTEGER PRIMARY KEY,
-  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019/01/01' and data <= '2021/12/31'), -- do tipo DD-MM-YYYY
+  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019-01-01' and data <= '2021-12-31'), -- do tipo DD-MM-YYYY
   montante              REAL CHECK(montante > 0),
   nif                   INTEGER REFERENCES Cliente (nif),
   nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE)             
@@ -177,7 +177,7 @@ CREATE TABLE HorarioFuncionamento (
 
 CREATE TABLE HorarioTrabalho (
   nif                   INTEGER REFERENCES Funcionario (nif),
-  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019/01/01' and data <= '2021/12/31'),
+  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019-01-01' and data <= '2021-12-31'),
   horaInicio            VARCHAR(5) CHECK( length(horaInicio) = 5 and horaInicio >= '00:00' and horaInicio <=  '24:00'), -- do tipo HH:MM
   horaFim               VARCHAR(5) CHECK(length(horaFim) = 5 and horaFim > horaInicio and horaFim >= '00:00' and horaFim <= '24:00'), 
   PRIMARY KEY (nif, data)
