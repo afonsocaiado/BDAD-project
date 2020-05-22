@@ -49,7 +49,7 @@ CREATE TABLE Morada_CPostal(
 CREATE TABLE PessoaFrequenteShopping (
   nif                   INTEGER PRIMARY KEY CHECK (nif >= 100000000 and nif <= 999999999),
   nome                  VARCHAR(255) NOT NULL,
-  morada                VARCHAR(255) REFERENCES Morada_CPostal ( morada ),
+  morada                VARCHAR(255) REFERENCES Morada_CPostal ( morada ) ,
   telefone              INTEGER UNIQUE CHECK (telefone >= 910000000 and telefone <= 969999999)       
 );
 
@@ -146,7 +146,7 @@ CREATE TABLE ProdutoDevolvido (
 
 CREATE TABLE Compra (
   id                    INTEGER PRIMARY KEY,
-  data                  VARCHAR(10) NOT NULL CHECK (data >= '01/01/2019' and data <= '31/2/2021'), -- do tipo DD-MM-YYYY
+  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019/01/01' and data <= '2021/12/31'), -- do tipo DD-MM-YYYY
   montante              REAL CHECK(montante > 0),
   nif                   INTEGER REFERENCES Cliente (nif),
   nomeE                 VARCHAR(255) REFERENCES Estabelecimento (nomeE)             
@@ -177,7 +177,7 @@ CREATE TABLE HorarioFuncionamento (
 
 CREATE TABLE HorarioTrabalho (
   nif                   INTEGER REFERENCES Funcionario (nif),
-  data                  VARCHAR(10) NOT NULL, --CHECK (data >= '2019-01-01' and data <= '2022-12-31'),
+  data                  VARCHAR(10) NOT NULL CHECK (data >= '2019/01/01' and data <= '2021/12/31'),
   horaInicio            VARCHAR(5) CHECK( length(horaInicio) = 5 and horaInicio >= '00:00' and horaInicio <=  '24:00'), -- do tipo HH:MM
   horaFim               VARCHAR(5) CHECK(length(horaFim) = 5 and horaFim > horaInicio and horaFim >= '00:00' and horaFim <= '24:00'), 
   PRIMARY KEY (nif, data)

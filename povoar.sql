@@ -187,16 +187,16 @@ INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Caf
 INSERT INTO Produto (nomeP, codigo, custoUnitario, quantidadeStock) VALUES ('Frango', 10, 6.75, 20);
 
 -- Data : Devolucao
-INSERT INTO Devolucao (id, data, nif) VALUES (1, '23/02/2020', 111111111);
-INSERT INTO Devolucao (id, data, nif) VALUES (2, '24/02/2020', 111111111);
-INSERT INTO Devolucao (id, data, nif) VALUES (3, '23/02/2020', 555555555);
-INSERT INTO Devolucao (id, data, nif) VALUES (4, '24/02/2020', 222222222);
-INSERT INTO Devolucao (id, data, nif) VALUES (5, '23/02/2020', 333333333);
-INSERT INTO Devolucao (id, data, nif) VALUES (6, '23/02/2020', 666666666);
-INSERT INTO Devolucao (id, data, nif) VALUES (7, '24/02/2020', 171717171);
-INSERT INTO Devolucao (id, data, nif) VALUES (8, '23/02/2020', 191919191);
-INSERT INTO Devolucao (id, data, nif) VALUES (9, '24/02/2020', 202020202);
-INSERT INTO Devolucao (id, data, nif) VALUES (10, '23/02/2020',666666666);
+INSERT INTO Devolucao (id, data, nif) VALUES (1, '2020/02/23', 111111111);
+INSERT INTO Devolucao (id, data, nif) VALUES (2, '2020/02/24', 111111111);
+INSERT INTO Devolucao (id, data, nif) VALUES (3, '2020/02/23', 555555555);
+INSERT INTO Devolucao (id, data, nif) VALUES (4, '2020/02/24', 222222222);
+INSERT INTO Devolucao (id, data, nif) VALUES (5, '2020/02/23', 333333333);
+INSERT INTO Devolucao (id, data, nif) VALUES (6, '2020/02/23', 666666666);
+INSERT INTO Devolucao (id, data, nif) VALUES (7, '2020/02/24', 171717171);
+INSERT INTO Devolucao (id, data, nif) VALUES (8, '2020/02/23', 191919191);
+INSERT INTO Devolucao (id, data, nif) VALUES (9, '2020/02/24', 202020202);
+INSERT INTO Devolucao (id, data, nif) VALUES (10, '2020/02/23',666666666);
 
 -- Data : ProdutoDevolvido
 INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (7, 1, 1);
@@ -212,16 +212,16 @@ INSERT INTO ProdutoDevolvido (codigo, id, quantidade) VALUES (7, 10, 1);
 
 
 -- Data : Compra
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (6, "20/02/2020", 6.75, 444444444, 'Cinemas NOS');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (1, "20/02/2020", 2.99, 111111111, 'Primark');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (2, "20/02/2020", 12.99, 111111111, 'Pull Bear');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (3, "20/02/2020", 12.99, 222222222, 'Zara');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (4, "25/02/2020", 3.25, 555555555, 'McDonalds');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (5, "25/02/2020", 6.75, 444444444, 'Continente');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (7, "20/02/2020", 10, 333333333, 'Primark');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (8, "20/02/2020", 10, 222222222, 'Bowling');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (9, "25/02/2020", 0.95, 555555555, 'McDonalds');
-INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (10, "25/02/2020", 4.25, 555555555, 'McDonalds');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (6, '2020/02/20', 6.75, 444444444, 'Cinemas NOS');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (1, '2020/02/20', 2.99, 111111111, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (2, '2020/02/20', 12.99, 111111111, 'Pull Bear');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (3, '2020/02/20', 12.99, 222222222, 'Zara');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (4, '2020/02/25', 3.25, 555555555, 'McDonalds');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (5, '2020/02/25', 6.75, 444444444, 'Continente');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (7, '2020/02/20', 10, 333333333, 'Primark');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (8, '2020/02/20', 10, 222222222, 'Bowling');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (9, '2020/02/25', 0.95, 555555555, 'McDonalds');
+INSERT INTO Compra (id, data, montante, nif, nomeE) VALUES (10, '2020/03/03', 4.25, 555555555, 'McDonalds');
 
 -- Data : ProdutoComprado
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (7, 1, 1);
@@ -236,26 +236,26 @@ INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (9, 9, 2);
 INSERT INTO ProdutoComprado (codigo, id, quantidade) VALUES (5, 10, 3);
 
 -- Data : HorarioFuncionamento
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Cinemas NOS', '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Zara', '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('HM', '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Bowling', '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('McDonalds', '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Primark', '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('FNAC', '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('H3', '20/02/2020', '10:00', '22:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Pull Bear', '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Continente', '20/02/2020', '08:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Cinemas NOS', '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Zara', '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('HM', '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Bowling', '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('McDonalds', '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Primark', '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('FNAC', '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('H3', '2020/02/20', '10:00', '22:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Pull Bear', '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioFuncionamento (nomeE, data, horaInicio, horaFim) VALUES ('Continente', '2020/02/20', '08:00', '24:00');
 
 
 -- Data : HorarioTrabalho
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (666666666, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (777777777, '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (888888888, '20/02/2020', '10:00', '22:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (999999999, '20/02/2020', '10:00', '23:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (101010101, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (121212121, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (131313131, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (141414141, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (151515151, '20/02/2020', '10:00', '24:00');
-INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (161616161, '20/02/2020', '08:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (666666666, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (777777777, '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (888888888, '2020/02/20', '10:00', '22:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (999999999, '2020/02/20', '10:00', '23:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (101010101, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (121212121, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (131313131, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (141414141, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (151515151, '2020/02/20', '10:00', '24:00');
+INSERT INTO HorarioTrabalho (nif, data, horaInicio, horaFim) VALUES (161616161, '2020/02/20', '08:00', '24:00');
