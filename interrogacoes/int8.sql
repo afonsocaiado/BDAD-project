@@ -2,7 +2,7 @@
 .headers ON
 .nullvalue NULL
 
---Qual a média dos valores das compras dos funcionarios?
+--Qual a média dos valores das compras dos clientes?
 SELECT AVG(montante) 
 FROM Cliente 
 INNER JOIN  PessoaFrequenteShopping
